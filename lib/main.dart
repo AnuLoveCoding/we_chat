@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:we_chat/screens/auth/login_screen.dart';
 import 'package:we_chat/screens/home_screen.dart';
+
+//global object for accessing device screen size;
+late Size mq;
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +36,7 @@ class MyApp extends StatelessWidget {
             elevation: 1,
           )
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
