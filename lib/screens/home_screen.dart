@@ -22,6 +22,11 @@ class _HomeScreenState extends State<HomeScreen> {
           IconButton(onPressed: (){}, icon: Icon(Icons.more_vert),),
         ],
       ),
+      
+      floatingActionButton: Padding(
+        padding:  EdgeInsets.only(bottom: 10.0),
+        child: FloatingActionButton(onPressed: (){},child: Icon(Icons.add_comment_rounded),),
+      ),
     );
   }
 }
