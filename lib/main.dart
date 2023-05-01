@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:we_chat/screens/auth/login_screen.dart';
 import 'package:we_chat/screens/home_screen.dart';
+import 'package:we_chat/screens/splash_screen.dart';
 
 //global object for accessing device screen size;
 late Size mq;
 
 void main() {
-  runApp(const MyApp());
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  //for setting orientations to portrait only;
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]);
+    runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
             elevation: 1,
           )
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }
